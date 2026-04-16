@@ -1,5 +1,5 @@
 {
-  "name": "ai-pages-mcp",
+  "name": "mcp-poc",
   "version": "1.0.0",
   "description": "Minimal MCP server exposing get_server_context from env",
   "type": "module",

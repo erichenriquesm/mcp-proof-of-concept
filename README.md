@@ -1,4 +1,4 @@
-# ai-pages MCP
+# mcp-poc MCP
 
 Servidor [MCP](https://modelcontextprotocol.io) em **TypeScript** que expõe ferramentas com contexto vindo só do **ambiente do processo** (`process.env`). Não há rede para montar o contexto (além do que o próprio cliente MCP fizer ao chamar as tools).
 
@@ -39,7 +39,7 @@ Tudo o que quiseres expor ao modelo (metadados, flags, etc.) vai **dentro desse 
 ## Correr localmente
 
 ```bash
-cd /caminho/para/ai-pages
+cd /caminho/para/mcp-poc
 npm install
 export MCP_CONTEXT='{"key":"value","feature_enabled":true}'
 npm start
@@ -49,14 +49,14 @@ Após alterar `.ts`: `npm run build` (ou `npm install` / `prepare`).
 
 ## Exemplo `mcp.json` (Cursor)
 
-Substitui o caminho pelo teu clone. O nome do servidor (`"pages"`, …) é só um rótulo no cliente.
+Substitui o caminho pelo teu clone. O nome do servidor (`"mcp-poc"`, …) é só um rótulo no cliente.
 
 ```json
 {
   "mcpServers": {
-    "pages": {
+    "mcp-poc": {
       "command": "node",
-      "args": ["/caminho/para/ai-pages/dist/server.js"],
+      "args": ["/caminho/para/mcp-poc/dist/server.js"],
       "env": {
         "MCP_CONTEXT": "{\"key\":\"value\",\"source\":\"client\",\"flag\":true}"
       }
@@ -74,4 +74,3 @@ Substitui o caminho pelo teu clone. O nome do servidor (`"pages"`, …) é só u
 ## Instruções para agentes (Cursor / Claude / outros)
 
 Um único ficheiro na raiz: **`AGENTS.md`**. O Cursor trata-o como instruções de agente (equivalente simples a `.cursor/rules`); o Claude Code e ferramentas semelhantes também costumam ler `AGENTS.md` no repositório.
-# mcp-proof-of-concept

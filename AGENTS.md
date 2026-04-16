@@ -1,8 +1,8 @@
-# Agent instructions — ai-pages MCP
+# Agent instructions — mcp-poc MCP
 
 **Single source of truth** for any agent (Cursor, Claude Code, etc.): plain Markdown, no frontmatter. In Cursor, root `AGENTS.md` is supported the same way as project rules ([docs](https://cursor.com/docs/context/rules#agentsmd)).
 
-Only apply this when the **pages** MCP server (`ai-pages-mcp`) is available in the client (in Cursor it may appear as `user-pages`).
+Only apply this when the **mcp-poc** MCP server is available in the client (in Cursor it may appear as `user-mcp-poc`).
 
 ---
 
@@ -24,7 +24,7 @@ Only apply this when the **pages** MCP server (`ai-pages-mcp`) is available in t
 
 **Use when:**
 
-- You need a **quick connectivity check** that the **pages** MCP process responds.
+- You need a **quick connectivity check** that the **mcp-poc** MCP process responds.
 - After **MCP or `mcp.json` changes**, to confirm the server is reachable.
 
 **Do not use** to read `MCP_CONTEXT` or configuration — use `get_server_context`.
